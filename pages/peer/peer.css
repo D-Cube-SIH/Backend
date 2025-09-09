@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+    background-color: #000;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.header .title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    width: 90%;
+    text-align: center;
+}
+
+
+.header p {
+    font-size: 28px;
+
+    text-align: center;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p img {
+    margin-right: 10px;
+}
+
+.header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.chat-container {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+.message-enter-from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.message-enter-active {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.input-holder {
+    position: absolute;
+    background-color: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+    padding-bottom: 20px;
+    bottom: 70px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.input-holder .input-box {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 0 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.input-holder .input-box input {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 1rem 2rem 1rem 0;
+    font-size: 16px;
+    outline: none;
+    margin-left: 10px;
+}
+
+.input-holder .input-box button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input-holder .input-box button img {
+    width: 35px;
+    height: 40px;
+}
+
+.aside-bar {
+    width: 300px;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%);
+    transition: all 1s ease-in-out;
+}
+
+.aside-bar .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #000;
+    border: none;
+    cursor: pointer;
+}
+
+
+.aside-bar .options {
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+
+}
+
+.aside-bar .options button,
+.aside-bar .logout-btn button {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.aside-bar .options button:hover {
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.aside-bar .logout-btn button {
+    width: 80%;
+    height: 40px;
+    background-color: #ff4b5c;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+}
